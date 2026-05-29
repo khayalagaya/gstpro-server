@@ -33,7 +33,7 @@ app.get('/gstin/:gstin', authenticate, async (req, res) => {
   }
 
   try {
-    const response = await fetch(`https://api.appyflow.in/gsp/gstin/${gstin}?key=${apiKey}`, {
+    const response = await fetch(`https://appyflow.in/api/verifyGST?gstNo=${gstin}&key_secret=${apiKey}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
